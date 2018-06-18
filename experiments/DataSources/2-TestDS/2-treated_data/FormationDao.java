@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface FormationDao extends ImogBeanDao<Formation> { * List associated CandidatureFormation,  * on the field candidatures * @param parent the parent entity * @return the list of the associated entities public List<CandidatureFormation> loadCandidatures(Formation parent) ; }

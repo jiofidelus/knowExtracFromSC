@@ -1,0 +1,1 @@
+package org.imogene.epicam.server ; public class ImogActorUtils { private static final ThreadLocal<ImogActor> currentActor = new ThreadLocal<ImogActor>() ;  public static void setCurrentActor(ImogActor actor) { currentActor.set(actor) ;  }  public static ImogActor getCurrentActor() { return currentActor.get() ;  } }

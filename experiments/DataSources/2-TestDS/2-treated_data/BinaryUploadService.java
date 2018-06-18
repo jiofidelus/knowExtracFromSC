@@ -1,0 +1,1 @@
+package org.imogene.web.server.service ; public interface BinaryUploadService { public String executeAction(HttpServletRequest request, List<FileItem> sessionFiles) throws UploadActionException ;  public void getUploadedFile(HttpServletRequest request, HttpServletResponse response) throws IOException ; }

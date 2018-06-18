@@ -1,0 +1,1 @@
+package org.imogene.epicam.server.shared ; @ProxyFor(value = Report.class, locator = RapportLocator.class)public interface ReportProxy extends EntityProxy{  public String getNom() ;  public void setNom(String nom)  ;  public int getVersion()  ;  public void setVersion(int version) ;   }

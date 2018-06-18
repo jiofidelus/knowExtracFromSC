@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy ; @ProxyFor(value = CardEntity.class, locator = CardEntityLocator.class)public interface CardEntityProxy extends ImogBeanProxy { public String getName() ;  public void setName(String value) ; }

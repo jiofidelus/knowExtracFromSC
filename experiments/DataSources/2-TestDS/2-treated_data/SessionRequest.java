@@ -1,0 +1,1 @@
+package org.imogene.web.shared.request ; @Service(value= SessionHandler.class, locator = SpringServiceLocator.class)public interface SessionRequest extends RequestContext {   Request<SessionInfoProxy> getSessionInfo() ;  Request<Void> disconnect() ;  Request<Boolean> validateSession(String sessionId) ; }

@@ -1,0 +1,1 @@
+package org.imogene.web.client.ui.field.widget ; public class ImogIntBox extends ValueBox<Integer> { public ImogIntBox() { super(Document.get().createTextInputElement(), ImogIntRenderer.instance(), ImogIntParser.instance()) ;  } }

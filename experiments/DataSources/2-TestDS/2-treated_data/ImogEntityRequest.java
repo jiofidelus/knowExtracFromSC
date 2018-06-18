@@ -1,0 +1,1 @@
+package org.imogene.web.shared.request ; public interface ImogEntityRequest extends RequestContext {  Request<Void> save(ImogBeanProxy entity, boolean isNew) ;  Request<Void> delete(ImogBeanProxy entity) ; }

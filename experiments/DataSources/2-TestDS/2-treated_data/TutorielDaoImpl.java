@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class TutorielDaoImpl extends ImogBeanDaoImpl<Tutoriel> implements TutorielDao { protected TutorielDaoImpl() { super(Tutoriel.class) ;  }  @Override public void delete() { //TODO } }

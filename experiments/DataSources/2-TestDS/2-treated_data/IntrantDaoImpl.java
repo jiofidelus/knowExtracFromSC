@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class IntrantDaoImpl extends ImogBeanDaoImpl<Intrant> implements IntrantDao { protected IntrantDaoImpl() { super(Intrant.class) ;  }  @Override public void delete() { //TODO } }

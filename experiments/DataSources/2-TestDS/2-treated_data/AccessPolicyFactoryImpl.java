@@ -1,0 +1,1 @@
+package org.imogene.epicam.server.security ; public class AccessPolicyFactoryImpl implements AccessPolicyFactory { @Override public AccessPolicy create(ImogActor actor) { return new AccessPolicyImpl(actor) ;  } }

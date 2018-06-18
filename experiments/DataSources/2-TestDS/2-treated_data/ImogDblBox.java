@@ -1,0 +1,1 @@
+package org.imogene.web.client.ui.field.widget ; public class ImogDblBox extends ValueBox<Double> { public ImogDblBox() { super(Document.get().createTextInputElement(), ImogDoubleRenderer.instance(), ImogDoubleParser.instance()) ;  } }

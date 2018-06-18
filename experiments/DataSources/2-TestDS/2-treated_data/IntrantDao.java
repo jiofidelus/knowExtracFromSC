@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface IntrantDao extends ImogBeanDao<Intrant> {}

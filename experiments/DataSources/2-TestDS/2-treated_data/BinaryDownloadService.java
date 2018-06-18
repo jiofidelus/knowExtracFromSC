@@ -1,0 +1,1 @@
+package org.imogene.web.server.service ; public interface BinaryDownloadService { public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException ; }

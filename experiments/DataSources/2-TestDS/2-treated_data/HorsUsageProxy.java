@@ -1,0 +1,1 @@
+package org.imogene.epicam.shared.proxy ; @ProxyFor(value = HorsUsage.class, locator = HorsUsageLocator.class)public interface HorsUsageProxy extends ImogBeanProxy { public SortieLotProxy getLot() ;  public void setLot(SortieLotProxy value) ;  public String getType() ;  public void setType(String value) ;  public String getMotif() ;  public void setMotif(String value) ; }

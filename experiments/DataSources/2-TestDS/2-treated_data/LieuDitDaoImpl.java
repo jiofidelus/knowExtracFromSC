@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class LieuDitDaoImpl extends ImogBeanDaoImpl<LieuDit> implements LieuDitDao { protected LieuDitDaoImpl() { super(LieuDit.class) ;  }  @Override public void delete() { //TODO } }

@@ -1,0 +1,1 @@
+package org.imogene.epicam.shared.proxy ; @ProxyFor(value = LocalizedText.class)public interface LocalizedTextProxy extends ValueProxy { public String getFrancais() ;  public void setFrancais(String francais) ;  public String getEnglish() ;  public void setEnglish(String english) ; }

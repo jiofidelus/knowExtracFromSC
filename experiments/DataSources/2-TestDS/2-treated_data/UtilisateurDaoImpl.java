@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class UtilisateurDaoImpl extends ImogActorDaoImpl<Utilisateur> implements UtilisateurDao { protected UtilisateurDaoImpl() { super(Utilisateur.class) ;  }  @Override public void delete() { //TODO } }

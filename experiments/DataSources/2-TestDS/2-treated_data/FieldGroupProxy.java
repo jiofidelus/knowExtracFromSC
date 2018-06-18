@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy ; @ProxyFor(value = FieldGroup.class, locator = FieldGroupLocator.class)public interface FieldGroupProxy extends ImogBeanProxy { public String getName() ;  public void setName(String value) ;  public CardEntityProxy getEntity() ;  public void setEntity(CardEntityProxy value) ; }

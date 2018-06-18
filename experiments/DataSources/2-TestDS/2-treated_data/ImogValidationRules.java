@@ -1,0 +1,1 @@
+package org.imogene.web.client.i18n ; public interface ImogValidationRules extends Constants { }

@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy.criteria ; @ProxyFor(value=ImogDisjunction.class)public interface ImogDisjunctionProxy extends ImogJunctionProxy {  }

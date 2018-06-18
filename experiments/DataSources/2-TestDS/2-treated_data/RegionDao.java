@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface RegionDao extends ImogBeanDao<Region> { * List associated DistrictSante,  * on the field districtSantes * @param parent the parent entity * @return the list of the associated entities public List<DistrictSante> loadDistrictSantes(Region parent) ; }

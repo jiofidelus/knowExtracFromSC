@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface InventaireDao extends ImogBeanDao<Inventaire> { * List associated DetailInventaire,  * on the field details * @param parent the parent entity * @return the list of the associated entities public List<DetailInventaire> loadDetails(Inventaire parent) ; }

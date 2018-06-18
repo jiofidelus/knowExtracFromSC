@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class PriseMedicamentRegimeDaoImpl extends ImogBeanDaoImpl<PriseMedicamentRegime> implements PriseMedicamentRegimeDao { protected PriseMedicamentRegimeDaoImpl() { super(PriseMedicamentRegime.class) ;  }  @Override public void delete() { //TODO } }

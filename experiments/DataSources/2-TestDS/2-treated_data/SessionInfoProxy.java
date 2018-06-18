@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy ; @ProxyFor(value=SessionInfo.class)public interface SessionInfoProxy extends ValueProxy {  public String getSessionId() ;  public void setSessionId(String sessionId) ;  public ImogActorProxy getActor() ;  public void setActor(ImogActorProxy actor) ;  }
