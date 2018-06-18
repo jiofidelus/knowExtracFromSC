@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class QualificationDaoImpl extends ImogBeanDaoImpl<Qualification> implements QualificationDao { protected QualificationDaoImpl() { super(Qualification.class) ;  }  @Override public void delete() { //TODO } }

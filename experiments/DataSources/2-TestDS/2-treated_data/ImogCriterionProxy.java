@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy.criteria ; @ProxyFor(value=ImogCriterion.class)public interface ImogCriterionProxy extends ValueProxy { }

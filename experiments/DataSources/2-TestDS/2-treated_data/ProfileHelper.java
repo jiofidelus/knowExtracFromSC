@@ -1,0 +1,1 @@
+package org.imogene.web.server.handler ; public interface ProfileHelper { public Profile createProfile() ; }

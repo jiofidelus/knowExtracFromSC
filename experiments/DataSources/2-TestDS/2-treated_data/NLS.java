@@ -1,0 +1,1 @@
+package org.imogene.epicam.client.i18n ; public class NLS { private static EpicamTranslations constants = (EpicamTranslations) GWT .create(EpicamTranslations.class) ;  public static EpicamTranslations constants() { return constants ;  } }

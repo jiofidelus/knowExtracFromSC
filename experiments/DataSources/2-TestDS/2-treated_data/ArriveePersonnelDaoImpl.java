@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class ArriveePersonnelDaoImpl extends ImogBeanDaoImpl<ArriveePersonnel> implements ArriveePersonnelDao { protected ArriveePersonnelDaoImpl() { super(ArriveePersonnel.class) ;  }  @Override public void delete() { //TODO } }

@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public class SmsPredefiniDaoImpl extends ImogBeanDaoImpl<SmsPredefini> implements SmsPredefiniDao { protected SmsPredefiniDaoImpl() { super(SmsPredefini.class) ;  }  @Override public void delete() { //TODO } }

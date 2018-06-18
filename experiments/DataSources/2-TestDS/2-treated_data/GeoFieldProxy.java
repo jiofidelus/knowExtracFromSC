@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy ; @ProxyFor(value=GeoField.class)public interface GeoFieldProxy extends ValueProxy { public Double getLatitude() ;  public void setLatitude(Double latitude) ;  public Double getLongitude() ;  public void setLongitude(Double longitude) ; }

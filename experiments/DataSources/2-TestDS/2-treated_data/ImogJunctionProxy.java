@@ -1,0 +1,1 @@
+package org.imogene.web.shared.proxy.criteria ; @ProxyFor(value=ImogJunction.class) public interface ImogJunctionProxy extends ImogCriterionProxy {  public List<ImogCriterionProxy> getCriterions() ;  public void setCriterions(List<ImogCriterionProxy> criterions) ; }

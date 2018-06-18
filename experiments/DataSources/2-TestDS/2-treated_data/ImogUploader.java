@@ -1,0 +1,1 @@
+package org.imogene.web.client.ui.field.binary ; public interface ImogUploader { public boolean isUploading() ; }

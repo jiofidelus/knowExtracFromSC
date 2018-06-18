@@ -1,0 +1,1 @@
+package org.imogene.web.shared.request ; public interface DynamicFieldsRequest extends RequestContext {  Request<Void> saveDynamicFieldValues(DynamicFieldInstanceProxy entity, boolean isNew) ;  Request<Void> deleteDynamicFieldValues(DynamicFieldInstanceProxy entity) ;   Request<Void> activateDynamicFieldTemplate(DynamicFieldTemplateProxy entity, boolean activate) ; }

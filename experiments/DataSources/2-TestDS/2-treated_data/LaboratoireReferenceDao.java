@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface LaboratoireReferenceDao extends ImogBeanDao<LaboratoireReference> { * List associated LieuDit,  * on the field lieuxDits * @param parent the parent entity * @return the list of the associated entities public List<LieuDit> loadLieuxDits(LaboratoireReference parent) ; }

@@ -1,0 +1,1 @@
+package org.imogene.epicam.domain.dao ; public interface UtilisateurDao extends ImogActorDao<Utilisateur> {}
