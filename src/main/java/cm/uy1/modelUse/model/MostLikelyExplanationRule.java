@@ -50,7 +50,7 @@ public class MostLikelyExplanationRule {
 			if(mostLikelyFrames.get(i).getStateLabel().equals("TARGET")) {
 				label = mostLikelyFrames.get(i).getObservedLabel();
 				if(Helper.belongs2Array(label, HMMRules.getTargetObservation()))
-					label="\n\n"+label+" ";
+					label="\n"+label+" ";
 				mostLikelyExplanation+=label+" ";
 			}
 		}
