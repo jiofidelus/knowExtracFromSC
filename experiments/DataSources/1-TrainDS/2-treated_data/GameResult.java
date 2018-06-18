@@ -1,0 +1,1 @@
+package rockpaperscissors ; public class GameResult {  String ResultText ;  String WinnerName ;  }

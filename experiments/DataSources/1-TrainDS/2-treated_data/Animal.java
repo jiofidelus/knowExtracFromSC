@@ -1,0 +1,1 @@
+package subclassmania ; public abstract class Animal {  public abstract String MakeNoise() ;  public abstract String Type() ; }

@@ -1,0 +1,1 @@
+package rockpaperscissors ; public enum Throw { ROCK, PAPER, SCISSORS ; }

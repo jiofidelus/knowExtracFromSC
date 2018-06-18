@@ -1,0 +1,1 @@
+package cashregisterdrawer ; public interface ICashRegisterDrawer {  public DrawerStatus getDrawerStatus() ;  public void Open() ;  public void Close() ;  public boolean isOpen() ;  public boolean isClosed() ;  }

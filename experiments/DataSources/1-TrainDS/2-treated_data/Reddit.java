@@ -1,0 +1,1 @@
+package RedditApiDemo ; public class Reddit{ public Data data ;  public String kind ; }

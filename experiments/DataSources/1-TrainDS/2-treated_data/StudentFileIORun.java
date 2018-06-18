@@ -1,0 +1,1 @@
+EXAMPLE OUTPUT FROM RUN:Enter Student Name ==> Bill MelatorEnter Student GPA ==> 3.42Writing to student.txt...Reading from student.txt...Student: Bill Melator 3.420000 package studentfileio ; public class StudentFileIORun { public static void main(String[] args) { // TODO code your application logic here  } }

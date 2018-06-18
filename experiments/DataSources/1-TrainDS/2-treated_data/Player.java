@@ -1,0 +1,1 @@
+package rockpaperscissors ; public class Player { public String Name ;  public Throw Throw ;   public Player(String name, Throw t) { this.Name = name ;  this.Throw=t ;  } }
