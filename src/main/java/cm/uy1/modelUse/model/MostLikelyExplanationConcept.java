@@ -20,6 +20,8 @@ import org.apache.commons.lang3.StringUtils;
 
 public class MostLikelyExplanationConcept {
 	
+	public static int numberFalsePositive=0;
+	
 	/**
 	 * knowExtracted method takes as input the alphaTable and retrun the most 
 	 * likelly source code.
@@ -29,7 +31,7 @@ public class MostLikelyExplanationConcept {
 	 * @param alphaTable
 	 * @return
 	 */
-	
+	public static int nbTarget, nbFalsePositive=0;
 	public static String knowledgeExtraction(List<Column> alphaTable) {
 		String mostLikelyExplanation="";
 		
@@ -58,7 +60,7 @@ public class MostLikelyExplanationConcept {
 		String falsePositive[] = {";", "{", "}", 
 				"public", "private", "protected", "static", "final"};
 		String label="";
-		int nbTarget=0, nbFalsePositive=0;
+//		nbTarget=0, nbFalsePositive=0;
 		for (int i = mostLikelyFrames.size()-1; i>=0; i--) {
 			if(mostLikelyFrames.get(i).getStateLabel().equals("TARGET")&&
 					StringUtils.indexOfAny(mostLikelyFrames.get(i).getObservedLabel(), 
@@ -68,9 +70,15 @@ public class MostLikelyExplanationConcept {
 				mostLikelyExplanation+=label+"\n";
 //				System.out.println("Position : "+i+" "+label);
 			}
-			nbFalsePositive = mostLikelyFrames.size()-1-nbTarget;
-			System.out.println("**********Number of false positives: "+nbFalsePositive+
-					"******************");
+			if(mostLikelyFrames.get(i).getStateLabel().equals("TARGET")&&
+					StringUtils.indexOfAny(mostLikelyFrames.get(i).getObservedLabel(), 
+							falsePositive)!=-1) {
+				nbFalsePositive++;
+			}
+//			System.out.println("**********Number of terms: "+nbTarget+
+//					"******************");
+//			System.out.println("**********Number of false positives: "+nbFalsePositive+
+//					"******************");
 		}
 		return mostLikelyExplanation;		
 	}

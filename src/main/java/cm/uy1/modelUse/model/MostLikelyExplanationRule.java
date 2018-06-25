@@ -30,8 +30,8 @@ public class MostLikelyExplanationRule {
 //		System.out.println("+++++++++++++++++++++++++++++The last column of the table"+lasColumn);
 		//Get the last frame which has the greatest probability
 		frame = Helper.mostGreatestFrameProba(lasColumn);
-		System.out.println("+++++++++++++++++++++++++++The most greater "
-				+ "frame probab : "+frame+"\nBuild by:"+frame.getFrameBuilder());
+//		System.out.println("+++++++++++++++++++++++++++The most greater "
+//				+ "frame probab : "+frame+"\nBuild by:"+frame.getFrameBuilder());
 		//Get the frames that permit to have the above frame
 		
 		List<Frame> mostLikelyFrames = new ArrayList<>();
@@ -143,7 +143,7 @@ public class MostLikelyExplanationRule {
 				frameTMP=null;
 				
 				
-				System.out.println("******************Element of the file : "+tmp[i]);
+//				System.out.println("******************Element of the file : "+tmp[i]);
 				//Get the last element of the list
 				column = alphaTable.get(alphaTable.size()-1);
 				
@@ -163,7 +163,7 @@ public class MostLikelyExplanationRule {
 				frameUsed = Helper.getMaxFrame(framePRE, frameTARGET, framePOST, frameOTHER, 
 						prePreTransitionValue, preTargetTransitionValue, prePostTransitionValue,
 						preOtherTransitionValue);
-				System.out.println("................The frame used to build PRE:\n"+frameUsed);
+//				System.out.println("................The frame used to build PRE:\n"+frameUsed);
 				//The value of the probability that is calculated
 				calculPRE = Math.max
 						(Math.max(prePreTransitionValue*framePRE.getProbabilityValue(), 
@@ -176,9 +176,9 @@ public class MostLikelyExplanationRule {
 						Helper.belongs2Array(tmp[i+1], hmmRules.getTargetObservation()))
 					preEmission = preEmissionProbability(tmp[i], hmmRules);
 				//Create the new frame for PRE state and add to the column
-				System.out.println("********* Calcul PRE: "+calculPRE+"\nCalcul PRE emission"+preEmission);
+//				System.out.println("********* Calcul PRE: "+calculPRE+"\nCalcul PRE emission"+preEmission);
 				frameTMP = new Frame(tmp[i], "PRE", calculPRE*preEmission, frameUsed);
-				System.out.println("+++++++++++PRE inserted:\n"+frameTMP);
+//				System.out.println("+++++++++++PRE inserted:\n"+frameTMP);
 				columnTMP.setPreFrame(frameTMP);
 				
 				/**
@@ -187,7 +187,7 @@ public class MostLikelyExplanationRule {
 				frameUsed = Helper.getMaxFrame(framePRE, frameTARGET, framePOST, frameOTHER, 
 						targetPreTransitionValue, targetTargetTransitionValue, 
 						targetPostTransitionValue, targetOtherTransitionValue);
-				System.out.println("................The frame used to build TARGET:\n"+frameUsed);
+//				System.out.println("................The frame used to build TARGET:\n"+frameUsed);
 				//the value of the probability that is calculates
 				calculTARGET = Math.max
 						(Math.max(targetPreTransitionValue*framePRE.getProbabilityValue(), 
@@ -214,7 +214,7 @@ public class MostLikelyExplanationRule {
 //						calculTARGET+"\nCalcul TARGET emission"+targetEmission);
 				//Create the new frame for TARGET state and add to the column
 				frameTMP = new Frame(tmp[i], "TARGET", calculTARGET*targetEmission, frameUsed);
-				System.out.println("+++++++++++TARGET inserted:\n"+frameTMP);
+//				System.out.println("+++++++++++TARGET inserted:\n"+frameTMP);
 				columnTMP.setTargetFrame(frameTMP);
 				
 				/**
@@ -223,7 +223,7 @@ public class MostLikelyExplanationRule {
 				frameUsed = Helper.getMaxFrame(framePRE, frameTARGET, framePOST, frameOTHER, 
 						postPreTransitionValue, postTargetTransitionValue, postPostTransitionValue, 
 						postOtherTransitionValue);
-				System.out.println("................The frame used to build POST:\n"+frameUsed);
+//				System.out.println("................The frame used to build POST:\n"+frameUsed);
 				//The value of the probability that is calculates
 				calculPOST = Math.max
 						(Math.max(postPreTransitionValue*framePRE.getProbabilityValue(),
@@ -248,7 +248,7 @@ public class MostLikelyExplanationRule {
 //						+"\nCalcul POST emission"+postEmission);
 				//Create the new frame for POST state and add to the column
 				frameTMP = new Frame(tmp[i], "POST", calculPOST*postEmission, frameUsed);
-				System.out.println("+++++++++++POST inserted:\n"+frameTMP);
+//				System.out.println("+++++++++++POST inserted:\n"+frameTMP);
 				columnTMP.setPostFrame(frameTMP);
 					
 				/**
@@ -258,7 +258,7 @@ public class MostLikelyExplanationRule {
 						otherPreTransitionValue, otherTargetTransitionValue, otherPostTransitionValue, 
 						otherOtherTransitionValue);
 
-				System.out.println("................The frame used to build OTHER:\n"+frameUsed);
+//				System.out.println("................The frame used to build OTHER:\n"+frameUsed);
 				//The value of the probability which is calculated
 				calculOTHER = Math.max
 						(Math.max(otherPreTransitionValue*framePRE.getProbabilityValue(), 
@@ -282,9 +282,9 @@ public class MostLikelyExplanationRule {
 //						"\nCalcul OTHER emission"+otherEmission);
 				
 				frameTMP = new Frame(tmp[i], "OTHER", calculOTHER*otherEmission, frameUsed);
-				System.out.println("+++++++++++OTHER inserted:\n"+frameTMP);
+//				System.out.println("+++++++++++OTHER inserted:\n"+frameTMP);
 				columnTMP.setOtherFrame(frameTMP);
-				System.out.println("The column inserted: \n"+columnTMP);
+//				System.out.println("The column inserted: \n"+columnTMP);
 				alphaTable.add(Helper.avoidZeroProba(columnTMP));
 				
 //				System.out.println("+++++++++++++++++++++++The element "+tmp[i]);

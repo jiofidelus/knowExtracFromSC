@@ -30,7 +30,14 @@ public class TestDataCollection {
 			+ "1-TrainDS/2-treated_data/";
 	private static final String DATASET2="/home/azanzi/Documents/workspace/hmm/AdditionalMaterials"
 			+ "/DataSources/2-TestDS/2-treated_data/";
-	  private static final File folder = new File(RAWDATA2);
+	
+	///Data collection for GeoServer
+	private static final String GEOSERVERRAWDATA = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/DataSources/3-Geoserver/1-raw_data/";
+	
+	private static final String GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/DataSources/3-Geoserver/2-treated_data/";
+//	  private static final File folder = new File(RAWDATA2);
 	  
 	  
 	private static Pattern pattern, patternBlankSpace;
@@ -49,12 +56,23 @@ public class TestDataCollection {
 	private static String regexBlankSpace = "(\\w)(\\s+)([\\.,])";
 	
 	
-	
+	//To collect some data, uncomment the concerned function
 public static void main(String[] args){
-		//This is to build the training data set
-		Helper.buildDataSet(RAWDATA1, DATASET1);
-		//this is to build the test data set (epicam dataset)
-		Helper.buildDataSet(RAWDATA2, DATASET2);
+	/**
+	 * Training data collection
+	 */
+//		//This is to build the training data set
+//		Helper.buildDataSet(RAWDATA1, DATASET1);
+	/**
+	 * EPICAM data collection
+	 */
+//		//this is to build the test data set (epicam dataset)
+//		Helper.buildDataSet(RAWDATA2, DATASET2);
+		/**
+		 * Geoserver data collection
+		 */
+		///Data collection for GeoServer
+		Helper.buildDataSet(GEOSERVERRAWDATA, GEOSERVER);
 		
 	}
 }

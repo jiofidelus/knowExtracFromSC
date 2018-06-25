@@ -38,6 +38,16 @@ public class TestsRulesExtraction {
 	private static final String TEST="/home/azanzi/Documents/workspace/AdditionalMaterials/"
 			+ "/DataSources/2-TestDS/tests/";
 
+	
+	///Geoserver
+	//Data source
+	private static final String GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/DataSources/3-Geoserver/1-raw_data";
+	
+	//Terms extracted
+	private static final String RULESEXTRACTED2GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/geoserverRules";
+	
 	public static void main(String[] args) {
 		//***********************Train the HMM***************************************
 		//Get the data

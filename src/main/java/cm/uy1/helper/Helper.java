@@ -188,9 +188,9 @@ public class Helper {
 			}
 		}
 
-		for (String string : listDocs) {
-			System.out.println(string);
-		}
+//		for (String string : listDocs) {
+//			System.out.println(string);
+//		}
 		return nbInstr;
 	}
 

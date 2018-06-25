@@ -27,6 +27,16 @@ public class TestTermsExtraction {
 
 	private static final String TEST="/home/azanzi/Documents/workspace/AdditionalMaterials/"
 			+ "/DataSources/2-TestDS/tests/";
+	
+	
+	///Geoserver
+	//Data source
+	private static final String GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/DataSources/3-Geoserver/2-treated_data/";
+	
+	//Terms extracted
+	private static final String TERMSEXTRACTED2GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/geoserverTerms";
 
 	public static void main(String[] args) {
 		//***********************Train the HMM***************************************
@@ -56,28 +66,6 @@ public class TestTermsExtraction {
 		
 //		System.out.println(hmmConcept);
 
-//		//*************************END of the HMM training***************************************
 
-		//Knowledge extraction
-		List<String> testedSourceCode = 
-				Helper.getAllDataFromFolder(TEST);
-		List<Column> alphaTable;
-
-		for (String sourceFile : testedSourceCode) {
-			alphaTable = MostLikelyExplanationConcept.
-					fillAlphaStartTable4Concepts(hmmConcept, sourceFile);
-			for (Column column : alphaTable) {
-//				Helper.writeDataToFile(CONCEPTSEXTRACTED, column.toString());
-			
-			
-			String extracted = MostLikelyExplanationConcept.knowledgeExtraction(alphaTable);
-			
-			System.out.println(extracted);
-//			Translation in formal language
-//			Writing in the OWL file
-			Helper.writeDataToFile(CONCEPTSEXTRACTED, extracted);
-
-		}
-		}
 	}
 }

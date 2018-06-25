@@ -39,6 +39,17 @@ public class TestTrainingRules {
 	private static final String TEST="/home/azanzi/Documents/workspace"
 			+ "/AdditionalMaterials/DataSources/2-TestDS/tests";
 
+
+	///Geoserver
+	//Data source
+	private static final String GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/DataSources/3-Geoserver/1-raw_data";
+	
+	//Terms extracted
+	private static final String RULESEXTRACTED2GEOSERVER = "/home/azanzi/Documents"
+			+ "/workspace/AdditionalMaterials/geoserverRules";
+	
+	
 	public static void main(String[] args) {
 		//***********************Train the HMM***************************************
 		//Get the data
@@ -60,33 +71,36 @@ public class TestTrainingRules {
 		HMMRuleObservation.otherObservation(listSouceCode, hmmRules);
 		
 //		System.out.println(hmmRules);
-		
+//		////To extract knowledge, just uncomment the corresponding source code
+//		/**
+//		 * Extracting knowledge from EPICAM
+//		 */
+//		//Knowledge extraction
+//		List<String> testedSourceCode = Helper.getAllDataFromFolder(DATASET2);
+//		List<Column> alphaTable;
+//		
+//		for (String sourceFile : testedSourceCode) {
+//
+//			alphaTable = MostLikelyExplanationRule.fillAlphaTable4Rules(hmmRules, sourceFile);
+//			String extracted = MostLikelyExplanationRule.knowledgeExtraction(alphaTable);
+//			Helper.writeDataToFile(RULESEXTRACTED, extracted);
+////			System.out.println("***************"+extracted);
+//		}
+
+		/**
+		 * Extracting knowledge from GEOSERVER
+		 */
 		//Knowledge extraction
-		List<String> testedSourceCode = Helper.getAllDataFromFolder(DATASET2);
+		List<String> testedSourceCode = Helper.getAllDataFromFolder(GEOSERVER);
 		List<Column> alphaTable;
 		
 		for (String sourceFile : testedSourceCode) {
 
 			alphaTable = MostLikelyExplanationRule.fillAlphaTable4Rules(hmmRules, sourceFile);
 			String extracted = MostLikelyExplanationRule.knowledgeExtraction(alphaTable);
-			Helper.writeDataToFile(RULESEXTRACTED, extracted);
+			Helper.writeDataToFile(RULESEXTRACTED2GEOSERVER, extracted);
 //			System.out.println("***************"+extracted);
 		}
-		
-//		for (String sourceFile : testedSourceCode) {
-//			alphaTable = MostLikelyExplanationConcept.
-//					fillAlphaStartTable4Concepts(hmmConcept, sourceFile);
-//
-//			String extracted = MostLikelyExplanationConcept.knowledgeExtraction(alphaTable);
-//			
-////			Writing to an OWL file
-//			Helper.writeDataToFile(CONCEPTSEXTRACTED, extracted);
-//			
-////			System.out.println(Term2OWL.term2OWL(new File(CONCEPTSEXTRACTED)));
-//
-//
-////			}
-//		}
 	}
 	
 }
